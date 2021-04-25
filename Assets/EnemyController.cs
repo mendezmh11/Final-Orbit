@@ -81,6 +81,8 @@ public class EnemyController : MonoBehaviour
 
             patrol_Timer = 0f;
         }
+        
+        
     }
 
     void Chase()
@@ -93,7 +95,7 @@ public class EnemyController : MonoBehaviour
     }
     void SetNewRandomDestination()
     {
-        float rand_Radius = Random.RandomRange(patrol_Radius_Min, patrol_Radius_Max);
+        float rand_Radius = Random.Range(patrol_Radius_Min, patrol_Radius_Max);
 
         Vector3 randDir = Random.insideUnitSphere * rand_Radius;
         randDir += transform.position;
